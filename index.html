@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Atividade da Nana</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #7d7d67;
+        }
+
+        .cartao3D {
+            perspective: 1000px;
+        }
+
+        .box {
+            width: 300px;
+            height: 200px;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 1s;
+        }
+
+        .box:hover {
+            transform: rotateY(180deg);
+        }
+
+        .frente, .verso {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            padding: 50px;
+            box-sizing: border-box;
+            border: 5px solid #010a0b;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .frente {
+            background-color: #0f0d0d;
+        }
+
+        .verso {
+            background-color: #131212;
+            transform: rotateY(180deg);
+            justify-content: flex-start;
+            align-items: flex-start;
+            text-align: left;
+            font-size: 10px;
+            color: #d9e0e7;
+            padding: 20px;
+        }
+
+        .imagem {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .nome {
+            font-size: 15px;
+            font-weight: bold;
+            margin: 0;
+            color: rgb(247, 244, 244);
+        }
+
+        .foto {
+            margin-top: 9px;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            right: 10px;
+            top: 20px;
+        }
+
+        .verso p {
+            margin: 5px 0;
+        }
+
+        .inst {
+            margin-top: 5px;
+            font-size: 12px;
+        }
+
+        footer {
+            margin-top: 10px;
+            font-size: 10px;
+            color: #d9e0e7;
+        }
+
+        footer p {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin: 0;
+        }
+
+        .logo {
+            width: 15px;
+            height: 15px;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <div class="cartao3D">
+            <div class="box">
+                <div class="frente">
+                    <img src="img/gato_preto.jpg" alt="Gatinho Preto" class="imagem">
+                    <h3 class="nome">NAELY PAZ</h3>
+                </div>
+
+                <div class="verso">
+                    <img src="img/foto_perfil.jpeg" alt="Foto Gatinha" class="foto">
+                    <h2>Engenheira Química.</h2>
+                    <p>GitHub: <a href="https://github.com/NaelyPaz">Naely_Paz</a></p>
+                    <p>Email: <a href="mailto:naelyp@aluno.ifce.edu.br">naelyp@aluno.ifce.edu.br</a></p>
+                    <p>Numero: <a href="Telefone:+5585988515366">85 - 98851-5366</a></p>
+                    <div class="inst">
+                        Instagram: <a href="https://www.instagram.com/naely_paz">Naelypaz</a>
+                    </div>
+                    <footer>
+                        <p>Desenvolvido por Naely Paz
+                            <img src="https://media.tenor.com/PrWlMre_XEgAAAAi/love-cat.gif" alt="Logo do Designer" class="logo">
+                        </p>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
